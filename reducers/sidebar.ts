@@ -1,9 +1,4 @@
-import {
-  SHOW_DASHBOARD_SIDEBAR,
-  HIDE_DASHBOARD_SIDEBAR,
-  SHOW_MOBILE_SIDEBAR,
-  HIDE_MOBILE_SIDEBAR,
-} from "../actionTypes";
+import { SHOW_DASHBOARD_SIDEBAR, HIDE_DASHBOARD_SIDEBAR } from "../actionTypes";
 
 interface Action {
   type: string;
@@ -24,12 +19,6 @@ const sidebar = (
 
     case HIDE_DASHBOARD_SIDEBAR:
       return { ...sidebar, showDashboardSidebar: false };
-
-    case SHOW_MOBILE_SIDEBAR:
-      return { ...sidebar, showMobileSidebar: true };
-
-    case HIDE_MOBILE_SIDEBAR:
-      return { ...sidebar, showMobileSidebar: false };
 
     default:
       return sidebar;
